@@ -50,16 +50,16 @@ let Calculator = {
 // }
 
 //second attempt - still no good
+//check reduce function
 function actionApplyer(int, actions) {
     if (actions.length === 0) {
         return int;
-    }
-
-    else {
+    } else {
         for (let i = 0; i < actions.length; i++) {
             const func = actions[i];
-
-            return func();
+            
+            int = func(int);
         }
+        return int;
     }
 }
